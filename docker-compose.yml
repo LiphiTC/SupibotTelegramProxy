@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  supibot-telegram-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      TELEGRAM_TOKEN: "tg token"
+      ALLOWED_CHATS: "; separated chats"
+      BANNED_COMMANDS: "; separated commands"
+      TWITCH_USERNAME: "twitch username"
+      TWITCH_TOKEN: "twitch token"
+      TWITCH_PROXY_CHANNEL: "proxy channel"
