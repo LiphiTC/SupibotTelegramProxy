@@ -3,7 +3,7 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 COPY src /src
-WORKDIR /src/SupibotTelegramProxy
+WORKDIR /src
 RUN dotnet restore 
 RUN dotnet build SupibotTelegramProxy.csproj -c Release -o /app/build
 
