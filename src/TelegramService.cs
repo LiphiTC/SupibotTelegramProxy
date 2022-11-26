@@ -65,6 +65,8 @@ public class TelegramService
                 chatId: chatId,
                 text: "This command isn't supported in telegram proxy",
                 cancellationToken: cancellationToken);
+            
+            return;
         }
 
         var response = await _twitchProxy.GetAnswerFromSupinic(messageText);
